@@ -1,41 +1,25 @@
-// var x = 1;
-//  x = 2; // مشکلی ندارد!
-// console.log(x);
+let fruit = ["apple" , "banana" , "orang"];
 
+console.log(fruit);
+console.log(fruit[0]);
 
+fruit.push("grape");
+console.log(fruit);
 
-// let y = 1;
-// y = 2;
-// // y = "aa"; // SyntaxError
+fruit.pop()
+console.log(fruit);
 
-// console.log(y);
+fruit.unshift("grape"); 
+console.log(fruit);
+ 
+fruit.shift(); 
+console.log(fruit);
 
+fruit[4] = 100;
+console.log(fruit);
 
-// const z = 1;
-//  z = 2;
-// //  z = "aa"; // SyntaxError
+fruit[0] = "grape";
+console.log(fruit);
 
-//  console.log(z);
-
-
-// let outer = "بیرونی";
-check()
-
-function check() {
-  let middle = "میانی";
-  
-  if (true) {
-    let inner = "درونی";
-    console.log(inner); // "درونی" ✅
-    console.log(middle); // "میانی" ✅
-    console.log(outer); // "بیرونی" ✅
-  }
-  
-  console.log(inner); // ❌ خطا!
-}
-
-
-console.log(x); 
-let x = "local";
 
 
