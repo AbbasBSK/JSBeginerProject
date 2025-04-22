@@ -9,3 +9,4 @@ let text2= document.getElementsByClassName("mytext")
 
 console.log(text2[1].innerText);
 
+
