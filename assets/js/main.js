@@ -1,12 +1,21 @@
-// let text1 =  document.getElementById("mytext")
 
-// console.log(text1.innerText);
+// معرفی متغیر ها 
+const colorBtn = document.getElementById("colorBtn");
+const bgBtn = document.getElementById("bgBtn");
+const messageBox = document.getElementById("messageBox");
 
+// تابع اول با onclick در HTML
+function changeText() {
+  messageBox.innerText = "متن با onclick تغییر کرد!";
+}
 
-// text1.innerText = "test"
+// تابع دوم با addEventListener
+colorBtn.addEventListener("click", function () {
+  messageBox.style.color = "darkred";
+  messageBox.innerText = "متن با addEventListener تغییر کرد!";
+});
 
-let text2= document.getElementsByClassName("mytext")
-
-console.log(text2[1].innerText);
-
-
+// تابع سوم با onclick جاوااسکریپتی
+bgBtn.onclick = function () {
+  messageBox.style.backgroundColor = "#e3f2fd";
+};

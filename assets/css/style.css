@@ -1,8 +1,73 @@
-div {
+.mytext {
   text-align: center;
+  width: 100%;
   font-size: 20px;
   padding: 10px;
   background-color: aqua;
   font-weight: bolder;
   cursor: pointer;
+}
+
+ body {
+  font-family: 'Vazir', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#messageBox {
+  padding: 30px 50px;
+  background-color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: black;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+#textBtn {
+  background-color: #2196f3;
+  color: white;
+}
+
+#colorBtn  {
+  background-color: #4caf50;
+  color: white;
+}
+
+#bgBtn {
+  background-color: #ff9800;
+  color: white;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+.newClass{
+  background-color: #4caf50 !important;
+  opacity: .5;
 }
