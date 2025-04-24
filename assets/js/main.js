@@ -15,7 +15,11 @@ colorBtn.addEventListener("click", function () {
   messageBox.innerText = "متن با addEventListener تغییر کرد!";
 });
 
+
 // تابع سوم با onclick جاوااسکریپتی
 bgBtn.onclick = function () {
   messageBox.style.backgroundColor = "#e3f2fd";
+};
+bgBtn.onclick = function () {
+  messageBox.innerText = " متن تغییر کرد!";
 };
