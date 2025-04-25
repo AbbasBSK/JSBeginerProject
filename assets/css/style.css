@@ -1,73 +1,81 @@
-.mytext {
+body {
+  font-family: sans-serif;
   text-align: center;
-  width: 100%;
-  font-size: 20px;
-  padding: 10px;
-  background-color: aqua;
-  font-weight: bolder;
-  cursor: pointer;
+  background: #e9f1f8;
+  padding: 50px;
 }
 
- body {
-  font-family: 'Vazir', sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#messageBox {
-  padding: 30px 50px;
-  background-color: white;
-  font-size: 1.5rem;
-  font-weight: bolder;
-  color: black;
+.card {
+  width: 360px;
+  background: #ffffff;
+  padding: 25px;
+  margin: 0 auto;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
 }
 
-.btn {
-  padding: 10px 20px;
-  margin: 10px;
+.drink {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+select,
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: block;
+}
+
+button {
+  padding: 10px 16px;
+  margin: 8px;
+  font-size: 15px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s ease;
+  background: #2d89ef;
+  color: white;
+  transition: background 0.3s;
 }
 
-.btn:hover {
-  opacity: 0.9;
+button:hover {
+  background: #1c5fb4;
 }
 
-#textBtn {
-  background-color: #2196f3;
+.dark {
+  background: linear-gradient(to right , black , blue);
   color: white;
 }
 
-#colorBtn  {
-  background-color: #4caf50;
-  color: white;
+.order-box {
+  margin-top: 25px;
+  background: #fef9dc;
+  padding: 18px;
+  width: 350px;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-size: 17px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+.order-box ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.order-box li{
+text-align: right;}
 
-#bgBtn {
-  background-color: #ff9800;
-  color: white;
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-.newClass{
-  background-color: #4caf50 !important;
-  opacity: .5;
+.error {
+  color: red;
+  font-size: 14px;
 }
