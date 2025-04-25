@@ -1,9 +1,34 @@
-function submitOrder() {
-  const customerName = document.getElementById("nameInput").value;
-  const drink = document.getElementById("drinkSelect").value;
-  const orderList = document.getElementById("ordersUl");
+const orderList = document.getElementById("ordersUl");
+const drinkText = document.getElementById("drinkText");
+const errorBox = document.getElementById("errorMsg");
+const customerName = document.getElementById("nameInput");
+const drink = document.getElementById("drinkSelect");
 
-  const neworder = document.createElement("li")
-  neworder.innerText = `👤 ${customerName} - 🍹 ${drink}`;
-  orderList.appendChild(neworder)
+function submitOrder() {
+  const customerNameValue = customerName.value.trim();
+  const drinkValue = drink.value;
+
+  if (customerNameValue === "" || !drinkValue) {
+    errorBox.innerText = "لطفاً نام و نوشیدنی را وارد کنید!";
+  } else {
+    drinkText.innerText = `انتخاب شما: ${drinkValue}`;
+
+    // ایجاد یک آیتم لیست جدید
+    const newOrder = document.createElement("li");
+    newOrder.innerText = `👤 ${customerNameValue} - 🍹 ${drinkValue}`;
+    orderList.appendChild(newOrder);
+
+    // پاک کردن ورودی‌ها
+    customerName.value = "";
+    drink.value = "";
+  }
+}
+
+function toggleTheme() {
+  const card = document.getElementById("drinkCard");
+  card.classList.toggle("dark");
+}
+
+function reset() {
+  orderList.innerHTML = ""
 }
