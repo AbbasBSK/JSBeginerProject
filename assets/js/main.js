@@ -30,5 +30,5 @@ function toggleTheme() {
 }
 
 function reset() {
-  orderList.innerHTML = ""
+  orderList.innerHTML = `<li></li>`
 }
