@@ -20,7 +20,7 @@ function submitOrder() {
 
     // پاک کردن ورودی‌ها
     customerName.value = "";
-    drink.value = "";
+    drink.value = "آب پرتقال";
   }
 }
 
