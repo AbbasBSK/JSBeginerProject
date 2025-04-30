@@ -11,6 +11,7 @@ function submitOrder() {
   if (customerNameValue === "" || !drinkValue) {
     errorBox.innerText = "لطفاً نام و نوشیدنی را وارد کنید!";
   } else {
+    errorBox.innerText = ""
     drinkText.innerText = `انتخاب شما: ${drinkValue}`;
 
     // ایجاد یک آیتم لیست جدید
@@ -30,5 +31,5 @@ function toggleTheme() {
 }
 
 function reset() {
-  orderList.innerHTML = `<li></li>`
+  orderList.removeChild()
 }
