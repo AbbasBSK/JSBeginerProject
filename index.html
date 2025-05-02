@@ -13,33 +13,8 @@
         دوره مقدماتی جاوااسکریپت
     </div> <br>
 
-    <h2>🍹 سفارش‌ساز نوشیدنی</h2>
-
-  <div class="card" id="drinkCard">
-    <div class="drink" id="drinkText">نوع نوشیدنی را انتخاب کن</div>
-
-    <input type="text" id="nameInput" placeholder="نام شما">
-    
-    <select id="drinkSelect">
-      <option value="" disabled selected>-- انتخاب نوشیدنی --</option>
-      <option value="قهوه">☕ قهوه</option>
-      <option value="چای">🍵 چای</option>
-      <option value="آب پرتقال">🍊 آب پرتقال</option>
-      <option value="شیر موز">🥤 شیر موز</option>
-    </select>
-
-    <button onclick="submitOrder()">ثبت سفارش</button>
-    <button onclick="toggleTheme()">تغییر تم</button>
-    <button onclick="reset()">خالی کردن لیست</button>
-
-    <div id="errorMsg" class="error"></div>
-  </div>
-
-  <div class="order-box" id="orderList">
-    <strong>سفارش‌های ثبت‌شده:</strong>
-    <ul id="ordersUl"></ul>
-  </div>
-
+    <h2>📦 فرم سفارش قهوه</h2>
+    <button onclick="handleOrder()">ثبت سفارش</button>
 
     <script src="/assets/js/main.js"></script>
 </body>
