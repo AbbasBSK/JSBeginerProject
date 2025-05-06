@@ -1,6 +1,5 @@
-let number = [10 , 12, 14];
+for (let i = 1; i <= 10; i++) {
 
-for ( let i = 0 ; i <number.length ; i++ ){
-  console.log(`number : ${number[i]}`);
-  
+  if (i === 5) break
+  console.log(i);
 }
