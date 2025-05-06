@@ -13,8 +13,20 @@
         دوره مقدماتی جاوااسکریپت
     </div> <br>
 
-    <h2>📦 فرم سفارش قهوه</h2>
-    <button onclick="handleOrder()">ثبت سفارش</button>
+    <h1>بازی عدد جادویی 🎯</h1>
+    <p>یک عدد بین ۱ تا ۱۰ وارد کن:</p>
+    <input type="number" id="guess" min="1" max="10" />
+    <button onclick="checkGuess()">حدس بزن</button>
+    <div id="result"></div>
+
+    <!-- مدال -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h2>آفرین 🎉👏</h2>
+            <p>درست حدس زدی! 😍🧠✨</p>
+            <button onclick="closeModal()">بستن</button>
+        </div>
+    </div>
 
     <script src="/assets/js/main.js"></script>
 </body>
