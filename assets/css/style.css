@@ -24,7 +24,7 @@ body {
 /* استایلهای مربوط به فرم ثبت نام */
 
 .registerSection {
-  width: 30%;
+  width: 90%;
   background-color: white;
   padding: 20px;
   display: inline-block;
@@ -35,7 +35,7 @@ body {
 }
 
 .registerSection h1 {
-  font-size: 30px;
+  font-size: 20px;
   display: inline-block;
   background: linear-gradient(to right, #faff00, #00e0ff);
   background-clip: text;
