@@ -1,64 +1,85 @@
+@font-face {
+  font-family: yekan;
+  src: url("/assets/font/persianFont/yekan-font/yekan-regular.woff");
+  src: url("/assets/font/persianFont/yekan-font/yekan-regular.ttf");
+}
+@font-face {
+  font-family: vazir;
+  src: url("/assets/font/persianFont/vazir-font-v18.0.0/Vazir-Bold.woff");
+  src: url("/assets/font/persianFont/vazir-font-v18.0.0/Vazir-Bold.woff2");
+}
+
 body {
-  font-family: "Vazirmatn", sans-serif;
-  background: linear-gradient(to right, #ece9e6, #ffffff);
+  font-family: yekan;
+  font-style: oblique;
+  font-weight: bolder;
+  height: 100vh;
+  background-color: rgb(237, 234, 234);
   text-align: center;
-  padding: 50px;
+  direction: rtl;
+  }
+
+
+
+/* استایلهای مربوط به فرم ثبت نام */
+
+.registerSection {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  display: inline-block;
+  text-align: justify;
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
 }
 
-h1 {
-  color: #333;
+.registerSection h1 {
+  font-size: 30px;
+  display: inline-block;
+  background: linear-gradient(to right, #faff00, #00e0ff);
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.258);
 }
 
-input[type="number"] {
+
+input[type="text"] {
   padding: 10px;
-  font-size: 18px;
-  width: 100px;
-  margin: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-left: 10px;
+  font-family: inherit;
 }
+
 
 button {
   padding: 10px 20px;
-  font-size: 18px;
-  background-color: #4caf50;
-  color: white;
+  background-color: #007bff;
   border: none;
   border-radius: 8px;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
+  font-family: inherit;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
 }
 
-#result {
+#output {
   margin-top: 20px;
-  font-size: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+p {
+  margin: 10px 0;
 }
 
-.modal.show {
-  display: flex;
-  opacity: 1;
-}
-
-.modal-content {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
