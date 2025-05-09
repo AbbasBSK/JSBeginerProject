@@ -1,27 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>فرم ثبت اطلاعات</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <section class="registerSection">
-        <div class="title">
-            <h1>آموزش مقدماتی جاوااسکریپت </h1>
+
+    <div class="container">
+        <h2>فرم ثبت اطلاعات کاربران</h2>
+        <form id="userForm">
+            <input type="text" id="name" placeholder="نام" required />
+            <input type="text" id="family" placeholder="نام خانوادگی" required />
+            <input type="email" id="email" placeholder="ایمیل" required />
+            <input type="text" id="job" placeholder="شغل" />
+            <input type="tel" id="phone" placeholder="شماره تماس" />
+
+            <select id="gender">
+                <option value="">جنسیت را انتخاب کنید</option>
+                <option value="مرد">مرد</option>
+                <option value="زن">زن</option>
+            </select>
+
+            <button type="submit">افزودن</button>
+        </form>
+
+        <div class="buttons">
+            <button id="showModal">نمایش همه کاربران</button>
+            <button id="findByEmail">پیدا کردن با ایمیل</button>
+            <button id="checkIfAllHaveJob">آیا همه شاغل‌اند؟</button>
+            <button id="checkIfAnyIsMale">آیا حداقل یک مرد هست؟</button>
         </div>
+    </div>
 
-        <!-- // 🧪 تمرین ساده با تعامل DOM و استفاده از متدهای بالا:
-        // فایل HTML فرضی:
-        /* -->
-        <input type="text" id="inputText" placeholder="متنی وارد کنید">
-        <button onclick="analyzeText()">تحلیل متن</button>
-        <div id="output"></div>
+    <div id="overlay" class="overlay"></div>
+    <div id="modal" class="modal"></div>
 
-        <script src="/assets/js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

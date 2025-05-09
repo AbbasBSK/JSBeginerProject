@@ -1,85 +1,71 @@
-@font-face {
-  font-family: yekan;
-  src: url("/assets/font/persianFont/yekan-font/yekan-regular.woff");
-  src: url("/assets/font/persianFont/yekan-font/yekan-regular.ttf");
-}
-@font-face {
-  font-family: vazir;
-  src: url("/assets/font/persianFont/vazir-font-v18.0.0/Vazir-Bold.woff");
-  src: url("/assets/font/persianFont/vazir-font-v18.0.0/Vazir-Bold.woff2");
-}
-
 body {
-  font-family: yekan;
-  font-style: oblique;
-  font-weight: bolder;
-  height: 100vh;
-  background-color: rgb(237, 234, 234);
-  text-align: center;
+  font-family: sans-serif;
+  background: #f0f0f0;
+  padding: 30px;
   direction: rtl;
-  }
+}
 
-
-
-/* استایلهای مربوط به فرم ثبت نام */
-
-.registerSection {
-  width: 90%;
-  background-color: white;
+.container {
+  background: white;
+  max-width: 400px;
+  margin: auto;
   padding: 20px;
-  display: inline-block;
-  text-align: justify;
-  border: 1px solid black;
-  border-radius: 15px;
-  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.registerSection h1 {
-  font-size: 20px;
-  display: inline-block;
-  background: linear-gradient(to right, #faff00, #00e0ff);
-  background-clip: text;
-  color: rgba(0, 0, 0, 0.258);
-}
-
-
-input[type="text"] {
+form input, form select, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
   padding: 10px;
-  width: 300px;
-  font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  margin-left: 10px;
-  font-family: inherit;
+  font-size: 1em;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 8px;
+  background: #007bff;
   color: white;
-  font-size: 16px;
+  border: none;
+  padding: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  font-family: inherit;
+  border-radius: 5px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background: #0056b3;
 }
 
-#output {
-  margin-top: 20px;
-  padding: 15px;
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
   border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  line-height: 1.8;
+  z-index: 10;
+  min-width: 300px;
+  max-width: 90%;
+  animation: fadeIn 0.5s ease;
 }
 
-p {
-  margin: 10px 0;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -40%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
 }
-

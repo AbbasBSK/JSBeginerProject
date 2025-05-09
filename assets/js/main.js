@@ -6,6 +6,7 @@ function analyzeText() {
     alert("لطفا متن را وارد کنید")
     return
   }
+  
 
 
   let message = "";
