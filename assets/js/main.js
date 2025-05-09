@@ -1,31 +1,41 @@
-function analyzeText() {
-  const input = document.getElementById("inputText").value;
-  const output = document.getElementById("output");
+const form = document.getElementById("userForm");
+const nameInput = document.getElementById("name");
+const familyInput = document.getElementById("family");
+const emailInput = document.getElementById("email");
+const jobInput = document.getElementById("job");
+const phoneInput = document.getElementById("phone");
+const genderSelect = document.getElementById("gender");
+const modal = document.getElementById("modal");
+const overlay = document.getElementById("overlay");
 
-  if (input == "") {
-    alert("لطفا متن را وارد کنید")
-    return
-  }
+let people = [];
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault()
+  console.log();
   
+  const newperson = {
+    name: nameInput.value.trim(),
+    family: familyInput.value.trim(),
+    email: emailInput.value.trim(),
+    job: jobInput.value.trim(),
+    phone: phoneInput.value.trim(),
+    gender: genderSelect.value
+  }
+
+  console.log(newperson);
+  
+})
 
 
-  let message = "";
 
-  // استفاده از چند متد مهم رشته‌ای:
-  message += `<p>طول متن: ${input.length}</p>`;
-  message += `<p>حروف بزرگ: ${input.toUpperCase()}</p>`;
-  message += `<p>آیا شامل 'js' است؟ ${input.includes("js") ? "بله" : "خیر"}</p>`;
-  message += `<p>اولین موقعیت a: ${input.indexOf("a")}</p>`;
-  message += `<p>برعکس متن: ${input.split("").reverse().join("")}</p>`;
-  message += `<p>متن با حروف جداشده: ${input.split("").join("-")}</p>`;
 
-    // استفاده از if برای هشدار طول زیاد متن:
-    if (input.trim().length > 20) {
-      message += `<p style='color: red;'>متن شما طولانی است</p>`;
-    }
 
-    // مثال ternary برای تشخیص شروع متن:
-  message += `<p>${input.startsWith("سلام") ||input.startsWith("hello")   ? "با سلام شروع شده ✅" : "شروع متفاوت است ❌"}</p>`;
 
-  output.innerHTML = message;
-}
+
+
+
+
+
+
+

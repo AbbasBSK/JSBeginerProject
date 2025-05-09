@@ -1,5 +1,17 @@
+@font-face {
+  font-family: yekan;
+  src: url("/assets/font/persianFont/yekan-font/yekan-regular.woff");
+  src: url("/assets/font/persianFont/yekan-font/yekan-regular.ttf");
+}
+@font-face {
+  font-family: vazir;
+  src: url("/assets/font/persianFont/vazir-font-v18.0.0/Vazir-Bold.woff");
+  src: url("/assets/font/persianFont/vazir-font-v18.0.0/Vazir-Bold.woff2");
+}
+
+
 body {
-  font-family: sans-serif;
+  font-family: yekan;
   background: #f0f0f0;
   padding: 30px;
   direction: rtl;
@@ -14,12 +26,23 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-form input, form select, form button {
+li{
+  border: 1px solid rgba(0, 34, 255, 0.682);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top:5px ;
+}
+
+form input, form select, form button ,button  {
   display: block;
-  width: 100%;
+  width: 90%;
   margin-bottom: 10px;
   padding: 10px;
   font-size: 1em;
+  font-family: inherit;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-inline: auto;
 }
 
 .buttons {
@@ -43,15 +66,18 @@ button:hover {
 }
 
 .overlay {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 9;
+    transition: all 1s;
 }
 
 .modal {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -62,10 +88,7 @@ button:hover {
   z-index: 10;
   min-width: 300px;
   max-width: 90%;
-  animation: fadeIn 0.5s ease;
+  transition: all 1s;
+  width: 100vw;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translate(-50%, -40%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
-}
