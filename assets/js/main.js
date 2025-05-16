@@ -80,16 +80,21 @@ document.getElementById("findByEmail").addEventListener("click", () => {
   const person = people.filter(p => p.email === emailToFind.trim())
 
   if (person.length > 0) {
-    const { name, family, job, phone, gender } = person
-    modal.innerHTML = `
-       <h3>فرد یافت شد:</h3>
-       <p>نام: ${name}</p>
-       <p>نام خانوادگی: ${family}</p>
-       <p>شغل: ${job}</p>
-       <p>شماره تماس: ${phone}</p>
-       <p>جنسیت: ${gender}</p>
-     `;
-  } else {
+  modal.innerHTML = `<h3>افراد یافت شده:</h3>`;
+  
+  person.forEach(person => {
+    const { name, family, job, phone, gender } = person;
+    modal.innerHTML += `
+      <hr>
+      <p>نام: ${name}</p>
+      <p>نام خانوادگی: ${family}</p>
+      <p>شغل: ${job}</p>
+      <p>شماره تماس: ${phone}</p>
+      <p>جنسیت: ${gender}</p>
+    `;
+  });
+
+} else {
     modal.innerHTML = `<p>فردی با این ایمیل یافت نشد.</p>`;
   }
 
@@ -115,7 +120,7 @@ document.getElementById("checkIfAllHaveJob").addEventListener("click", () => {
   modal.style.visibility = "visible";
 })
 
-
+// آیا حداقل یک مرد وجود دارد 
 
 
 
