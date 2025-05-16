@@ -57,12 +57,7 @@ document.getElementById("showModal").addEventListener("click", () => {
 
     modal.appendChild(list);
   }
-
-  overlay.style.opacity = "1";
-  overlay.style.visibility = "visible";
-  modal.style.opacity = "1";
-  modal.style.visibility = "visible";
-
+  handleShowMadal();
 })
 
 // بستن مدال با کلیک روی پس‌زمینه
@@ -80,11 +75,11 @@ document.getElementById("findByEmail").addEventListener("click", () => {
   const person = people.filter(p => p.email === emailToFind.trim())
 
   if (person.length > 0) {
-  modal.innerHTML = `<h3>افراد یافت شده:</h3>`;
-  
-  person.forEach(person => {
-    const { name, family, job, phone, gender } = person;
-    modal.innerHTML += `
+    modal.innerHTML = `<h3>افراد یافت شده:</h3>`;
+
+    person.forEach(person => {
+      const { name, family, job, phone, gender } = person;
+      modal.innerHTML += `
       <hr>
       <p>نام: ${name}</p>
       <p>نام خانوادگی: ${family}</p>
@@ -92,16 +87,13 @@ document.getElementById("findByEmail").addEventListener("click", () => {
       <p>شماره تماس: ${phone}</p>
       <p>جنسیت: ${gender}</p>
     `;
-  });
+    });
 
-} else {
+  } else {
     modal.innerHTML = `<p>فردی با این ایمیل یافت نشد.</p>`;
   }
 
-  overlay.style.opacity = "1";
-  overlay.style.visibility = "visible";
-  modal.style.opacity = "1";
-  modal.style.visibility = "visible";
+  handleShowMadal();
 })
 
 
@@ -114,14 +106,28 @@ document.getElementById("checkIfAllHaveJob").addEventListener("click", () => {
     ? "<p>✅ همه افراد دارای شغل هستند.</p>"
     : "<p>❌ برخی افراد شغل ثبت نکرده‌اند.</p>";
 
-  overlay.style.opacity = "1";
-  overlay.style.visibility = "visible";
-  modal.style.opacity = "1";
-  modal.style.visibility = "visible";
+  handleShowMadal();
 })
 
 // آیا حداقل یک مرد وجود دارد 
 
+document.getElementById("checkIfAnyIsMale").addEventListener("click", () => {
+  const hasMale = people.some(p => p.gender === "مرد");
+
+  modal.innerHTML = hasMale
+    ? "<p>👨 حداقل یک آقا ثبت شده است.</p>"
+    : "<p>🚫 هیچ آقایی ثبت نشده است.</p>";
+  handleShowMadal();
+});
+
+
+
+const handleShowMadal = () => {
+  overlay.style.opacity = "1";
+  overlay.style.visibility = "visible";
+  modal.style.opacity = "1";
+  modal.style.visibility = "visible";
+}
 
 
 
@@ -158,21 +164,6 @@ document.getElementById("checkIfAllHaveJob").addEventListener("click", () => {
 
 
 
-
-
-// // some
-// document.getElementById("checkIfAnyIsMale").addEventListener("click", () => {
-//   const hasMale = people.some(p => p.gender === "مرد");
-
-//   modal.innerHTML = hasMale
-//     ? "<p>👨 حداقل یک آقا ثبت شده است.</p>"
-//     : "<p>🚫 هیچ آقایی ثبت نشده است.</p>";
-
-//   overlay.style.opacity = "1";
-//   overlay.style.visibility = "visible";
-//   modal.style.opacity = "1";
-//   modal.style.visibility = "visible";
-// });
 
 
 
