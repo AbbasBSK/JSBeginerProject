@@ -69,7 +69,6 @@ overlay.addEventListener("click", () => {
 });
 
 // پیدا کردن با ایمیل
-
 document.getElementById("findByEmail").addEventListener("click", () => {
   const emailToFind = prompt("ایمیل مورد نظر را وارد کنید:");
   const person = people.filter(p => p.email === emailToFind.trim())
@@ -119,7 +118,6 @@ document.getElementById("checkIfAnyIsMale").addEventListener("click", () => {
     : "<p>🚫 هیچ آقایی ثبت نشده است.</p>";
   handleShowMadal();
 });
-
 
 
 const handleShowMadal = () => {
