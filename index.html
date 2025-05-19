@@ -10,8 +10,31 @@
 <body>
 
     <h1>نمونه ایونت‌های جاوااسکریپت</h1>
-    <button onclick="changeColor(this)">کلیک کن اتربیوت</button>
-    <button id="btn">کلیک کن</button>
+    <!-- Mouse Events -->
+    <section>
+        <h2>۱. ایونت‌های Mouse</h2>
+        <button onclick="alert('کلیک شد!')">کلیک (HTML Attribute)</button>
+        <button id="mouseBtn">کلیک (JavaScript)</button>
+        <p><strong>توضیح:</strong> کلیک روی دکمه باعث اجرای تابع می‌شود.</p>
+    </section>
+
+    <!-- Keyboard Events -->
+    <section>
+        <h2>۲. ایونت‌های Keyboard</h2>
+        <input onchange="console.log('کلیدی فشرده شد!')" placeholder="تایپ کن (Attribute)">
+        <input id="keyboardInput" placeholder="تایپ کن (JavaScript)">
+        <p><strong>توضیح:</strong> با فشردن هر کلید در input، پیام در کنسول نمایش داده می‌شود.</p>
+    </section>
+
+        <!-- Form Events -->
+    <section>
+        <h2>۳. ایونت‌های فرم</h2>
+        <input type="checkbox" onchange="console.log(this.checked)"> چک باکس (Attribute)
+        <input type="checkbox" id="checkBox"> چک باکس (JavaScript)
+        <p><strong>توضیح:</strong> ایونت change برای بررسی تغییرات فرم، و submit برای پردازش ارسال.</p>
+    </section>
+
+
 
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/script.js"></script>

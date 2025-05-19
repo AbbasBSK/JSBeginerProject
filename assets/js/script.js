@@ -1,53 +1,15 @@
-const btn = document.getElementById("btn");
-btn.addEventListener("click", function (e) {
-  this.style.backgroundColor = "orange";
-  this.textContent = "کلیک شد!";
- e.stopPropagation()
+// <!-- Mouse Events -->
+document.getElementById("mouseBtn").addEventListener("contextmenu", function () {
+  alert("کلیک راست شد با JS!");
 });
 
+// <!-- Keyboard Events -->
+document.getElementById("keyboardInput").addEventListener("keyup", () => {
+  console.log("کلیدی فشرده شد با JS!");
+});
 
-  function changeColor(element) {
-    element.style.backgroundColor = "lightgreen";
-  }
+// <!-- Form Events -->
 
-
-  document.addEventListener("click" , function(){
-    btn.style.backgroundColor = "";
-    btn.textContent = "کلیک کن";
-  })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// event bubbling
-
-  function changeColor(element) {
-    element.style.backgroundColor = "lightgreen";
-  }
+document.getElementById("checkBox").addEventListener("change", function () {
+  console.log("وضعیت چک باکس:", this.checked);
+});
