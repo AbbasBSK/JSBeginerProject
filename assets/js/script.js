@@ -1,6 +1,8 @@
-setTimeout(() => {
-  console.log("A");
-}, 1000);
 
-setTimeout("console.log(333)", 200);
+const updateClock = ()=>{
+  let now = new Date().toLocaleTimeString()
 
+  document.getElementById("clock").textContent = now
+}
+
+setInterval(updateClock, 1000);
