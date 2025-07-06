@@ -1,19 +1,15 @@
-// تابع سازنده
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
 
-function Cars(brand, color) {
-  this.brand = brand;
-  this.color = color;
-
-  this.describe = function () {
-    console.log(`ماشین ${this.brand} به رنگ ${this.color}`);
-  };
+  sayHello() {
+    console.log(`سلام، من ${this.name} هستم و ${this.age} سالمه.`);
+  }
 }
 
+const p1 = new Person("عباس", 30);
 
-const cars1 = new Cars("Benz", "مشکی");
-console.log(cars1);
-cars1.describe(); 
-
-
-const test = cars1.describe;
-test();
+console.log(p1);
+p1.sayHello()
