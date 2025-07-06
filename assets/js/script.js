@@ -1,8 +1,19 @@
+// تابع سازنده
 
-const updateClock = ()=>{
-  let now = new Date().toLocaleTimeString()
+function Cars(brand, color) {
+  this.brand = brand;
+  this.color = color;
 
-  document.getElementById("clock").textContent = now
+  this.describe = function () {
+    console.log(`ماشین ${this.brand} به رنگ ${this.color}`);
+  };
 }
 
-setInterval(updateClock, 1000);
+
+const cars1 = new Cars("Benz", "مشکی");
+console.log(cars1);
+cars1.describe(); 
+
+
+const test = cars1.describe;
+test();
