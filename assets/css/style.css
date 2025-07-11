@@ -15,6 +15,18 @@
      background-color: #f5f5f5;
    }
 
-   #clock {
-     font-size: 40px;
+   button{
+    background:  greenyellow;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.491);
+    cursor: pointer;
+    transition: all 500ms;
+    font-family: inherit;
+    font-weight: bolder;
+    border: none;
    }
+   button:hover{
+    background:  aqua ;
+   }
+
