@@ -9,9 +9,20 @@
 
 <body>
 
-    <h1> مباحث مربوط به fetch , rest API</h1>
-    <button onclick="loadPosts()">نمایش پست‌ها</button>
-    <div id="output"></div>
+    <h2>لیست کاربران</h2>
+    <button onclick="loadUsers()">نمایش اطلاعات</button>
+
+    <table id="table" >
+        <thead>
+            <tr>
+                <th>نام</th>
+                <th>تلفن</th>
+                <th>ایمیل</th>
+                <th>آدرس</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
 
     <script src="/assets/js/script.js"></script>
 </body>
