@@ -10,20 +10,28 @@
 <body>
 
     <h2>لیست کاربران</h2>
-    <button onclick="loadUsers()">نمایش اطلاعات</button>
 
-    <table id="table" >
+    <!-- فرم اضافه کردن کاربر -->
+    <input type="text" id="name" placeholder="نام">
+    <input type="text" id="email" placeholder="ایمیل">
+    <button onclick="addUser()">افزودن کاربر</button>
+
+    <br><br>
+    <button onclick="loadUsers()">نمایش کاربران</button>
+
+    <table id="table">
         <thead>
             <tr>
+                <th>ردیف</th>
                 <th>نام</th>
                 <th>تلفن</th>
                 <th>ایمیل</th>
                 <th>آدرس</th>
+                <th>عملیات</th>
             </tr>
         </thead>
         <tbody id="tbody"></tbody>
     </table>
-
     <script src="/assets/js/script.js"></script>
 </body>
 
