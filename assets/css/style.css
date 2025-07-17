@@ -29,11 +29,12 @@
    }
 
    button:hover {
-     background: aqua;
+     background: aqua !important;
    }
 
     input { margin: 5px; padding: 10px 15px; border-radius: 5px; border: 1px solid #ccc; }
     table { width: 90%; margin: 20px auto; border-collapse: collapse; background: #fff; box-shadow: 0 0 10px #ccc; opacity: 0; }
     th, td { padding: 10px; border: 1px solid #ddd; }
     th { background: #4caf50; color: #fff; }
-    td button { background: crimson; color: white; border: none; cursor: pointer; }
+    td button:nth-child(1) { background: crimson;  }
+    td button:nth-child(2) { background: orange; margin-right: 5px; }
