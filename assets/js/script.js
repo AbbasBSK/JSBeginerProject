@@ -1,5 +1,6 @@
 function getCoffee() {
   return new Promise((resolve) => {
+    a
     setTimeout(() => {
       console.log("☕ قهوه آماده شد");
       resolve("قهوه");
@@ -7,17 +8,17 @@ function getCoffee() {
   });
 }
 
-// console.log("🔹 صبحانه می‌خورم");
-// getCoffee().then(coffee => {
-//   console.log("🔹 حالا که " + coffee + " گرفتم، میرم سر کار");
-// });
-// console.log("🔹 رفتم سر کار");
-
-
 
 async function startDay() {
   console.log("🔹 صبحانه می‌خورم");
-  const coffee = await getCoffee();
+
+
+  try {
+    coffee = await getCoffee();
+  } catch (err) {
+    console.log("❌ نتونستم قهوه بگیرم:", err.message);
+    return; // اگه قهوه نگرفتی، ادامه نده
+  }
   console.log("🔹 حالا که " + coffee + " گرفتم، میرم سر کار");
   console.log("🔹 رفتم سر کار");
 }
@@ -32,6 +33,63 @@ startDay()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// try {
+//   // کدی که ممکنه خطا بده
+//   console.log("قبل از خطا");
+//   let x = y + 1; // خطا: چون y تعریف نشده
+//   console.log("بعد از خطا"); // اجرا نمی‌شه
+//   throw new Error("سن باید حداقل ۱۸ سال باشد");
+// } catch (err) {
+//   // وقتی خطا رخ داد
+//   console.log("یه خطا رخ داد:", err.message);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function checkAge(age) {
+
+//   if (age > 18) throw new Error("سن باید حداکثر ۱۸ سال باشد")
+//   console.log("مجاز هستی");
+// }
+
+// try {
+//   checkAge(20);
+// } catch (err) {
+//   console.log("خطا:", err.message);
+// }
 
 
 
