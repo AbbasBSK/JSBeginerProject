@@ -3,7 +3,7 @@ const tbody = document.getElementById("tbody");
 // واکشی کاربران
 async function loadUsers() {
   try {
-    const res = await fetch('https://jsonplaceholder.typicode.com/userz');
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
     if (!res.ok) throw new Error(`خطا در واکشی کاربران: ${res.status}`);
     const data = await res.json();
 
